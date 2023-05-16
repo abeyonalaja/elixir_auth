@@ -67,6 +67,4 @@ defmodule RealDealApiWeb.Auth.Guardian do
       {:ok, claims}
     end
   end
-
-
 end
