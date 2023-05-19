@@ -4,6 +4,10 @@ defmodule RealDealApiWeb.AccountController do
   alias RealDealApiWeb.Auth.{Guardian, ErrorResponse}
   alias RealDealApi.{Accounts, Accounts.Account, Users, Users.User}
 
+  import RealDealApiWeb.Auth.AuthorizedPlug
+
+  plug :is_authorized when action in [:update, delete]
+
   action_fallback RealDealApiWeb.FallbackController
 
   def index(conn, _params) do
