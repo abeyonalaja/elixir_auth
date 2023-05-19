@@ -22,7 +22,7 @@ defmodule RealDealApiWeb.AccountJSON do
     %{
       id: account.id,
       email: account.email,
-      user:  UserJSON.show(%{user: user})
+      user: UserJSON.show(%{user: user})
     }
   end
 
